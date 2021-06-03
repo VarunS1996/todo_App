@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap');
+
+
+:root
+{
+    --purple:rgb(146, 33, 211);
+}
+
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+*::selection
+{
+    background: var(--purple);
+    color:#fff;
+}
+
+body
+{
+    height:100vh;
+    width:100%;
+    background: linear-gradient(to bottom, #68EACC 10%, #497BE8 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper
+{
+    background: white;
+    max-width: 400px;
+    width:100%;
+    border-radius: 5px;
+    padding:2rem;
+}
+
+.wrapper header
+{
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin:1.2rem;
+    text-align: center;
+}
+
+.wrapper .inputField
+{
+    display: flex;
+    height: 45px;
+    width:100%;
+}
+
+.inputField input
+{
+    width:85%;
+    height:100%;
+    border:1px solid #ccc;
+    font-size: 1.6rem;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.inputField button
+{
+    width:5rem;
+    height:100%;
+    border:none;
+    outline:none;
+    background:var(--purple);
+    color:#fff;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left:5px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputField button.active
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .todoList
+{
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 1.8rem;
+}
+
+.todoList li
+{
+    list-style: none;
+    height:45px;
+    font-size: 1.5rem;
+    line-height: 4.5rem;
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin-bottom:8px;
+    padding:0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoList li span
+{
+    position: absolute;
+    right:-45px;
+    background:red;
+    width:45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    color:white;
+    cursor: pointer;
+}
+
+.todoList li:hover span
+{
+    right:0;
+}
+
+.wrapper .footer
+{
+    display: flex;
+    width:100%;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.footer span
+{
+    font-size: 1.8rem;
+}
+
+.footer button
+{
+    border:none;
+    outline:none;
+    background:var(--purple);
+    color:#fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 3px;
+    padding:6px 10px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.footer button.active
+{
+    opacity:1;
+    pointer-events: auto;
+}
